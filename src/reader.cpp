@@ -7,9 +7,9 @@ Reader::Reader(string path) : filepath(path) {}
 void Reader::set_max_node()
 {
     int tmp = INT_MAX;
-    for (auto agv : this->coef.AGVs)
+    for (auto end_node : this->coef.end_nodes)
     {
-        tmp = min(agv.destination_node, tmp);
+        tmp = min(end_node.TWNode, tmp);
     }
     this->coef.max = tmp;
 }
@@ -119,6 +119,7 @@ void Reader::get_agv_info()
     while (true)
     {
         AGV agv;
+        Destionation end_node;
         agv.id = agv_id;
         if (!getline(file_agv, line))
             break;
@@ -128,15 +129,16 @@ void Reader::get_agv_info()
         if (!getline(file_agv, line))
             break;
         istringstream end_iss(line);
-        end_iss >> str >> agv.end_node >> flow;
+        end_iss >> str >> end_node.id >> flow;
 
         if (!getline(file_agv, line))
             break;
         istringstream window_time_iss(line);
-        window_time_iss >> str >> agv.earliness >> agv.tardliness >> agv.destination_node;
+        window_time_iss >> str >> end_node.earliness >> end_node.tardliness >> end_node.TWNode;
 
         agv_id++;
         this->coef.AGVs.push_back(agv);
+        this->coef.end_nodes.push_back(end_node);
     }
 }
 
@@ -177,7 +179,7 @@ void Reader::get_coef_res_input()
 
 void Reader::set_task()
 {
-    map<int, tuple<int, int, int>> task_info;
+    /*map<int, tuple<int, int, int>> task_info;
     for (auto agv : this->coef.AGVs)
     {
         task_info[agv.end_node] = make_tuple(agv.earliness, agv.tardliness, agv.destination_node);
@@ -211,7 +213,7 @@ void Reader::set_task()
                 agv.tardliness = get<1>(task_info[numbers.back()]);       // Lấy tardliness từ task_info
             }
         }
-    }
+    }*/
 }
 
 Coef Reader::set_coef()

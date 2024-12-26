@@ -11,6 +11,6 @@ int main(){
     SCIP_CALL(sol.Solve());
     SCIP_CALL(sol.Result());
     SCIP_CALL(sol.Free_resources());
-
+    
     return 0;
 }

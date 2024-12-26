@@ -1,5 +1,6 @@
 obj/static/O.linux.x86_64.gnu.opt/main.o: src/main.cpp src/reader.hpp \
- src/coefficient.hpp src/AGV.hpp src/Edge.hpp src/SCIPsovler.hpp \
+ src/coefficient.hpp src/destination.hpp src/AGV.hpp src/Edge.hpp \
+ src/SCIPsovler.hpp \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/scip.h \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/def.h \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/type_retcode.h \

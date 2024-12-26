@@ -1,6 +1,6 @@
 obj/static/O.linux.x86_64.gnu.opt/SCIPsolver.o: src/SCIPsolver.cpp \
- src/SCIPsovler.hpp src/coefficient.hpp src/AGV.hpp src/Edge.hpp \
- /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/scip.h \
+ src/SCIPsovler.hpp src/coefficient.hpp src/destination.hpp src/AGV.hpp \
+ src/Edge.hpp /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/scip.h \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/def.h \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/type_retcode.h \
  /mnt/d/DATN/solver/scipoptsuite-8.0.1/scip/src/scip/type_message.h \
