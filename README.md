@@ -9,7 +9,7 @@ Lưu ý: Cài đặt solver trên môi trường linux hoặc wsl2
 
 
 Lưu ý 2:
-     Đã có thêm chức năng đọc file trực tiếp từ TSG.txt.
+     Đã có thêm chức năng đọc file trực tiếp từ TSG.txt.( Trong hàm main.cpp chỉnh lại đường dẫn của file TSG.txt)
      
      Khi gọi gõ ./main truyền 1 số bất kỳ ở đằng sau như ./main 1 để đọc từ TSG.txt
      
