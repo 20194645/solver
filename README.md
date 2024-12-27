@@ -25,5 +25,5 @@ Lưu ý 2:
      
      - gamma 1 // Các hệ số
      
-     Khi chạy trong giả lập cũng cần phải thay đổi code để mỗi khi cập nhật TSG.txt thì nó cũng phải in ra thêm các dòng có định dạng như này 
+     Khi chạy trong giả lập cũng cần phải thay đổi code trong giả lập để mỗi khi cập nhật TSG.txt thì nó cũng phải in ra thêm các dòng có định dạng như này 
      
