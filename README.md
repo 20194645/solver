@@ -6,3 +6,13 @@ Hướng dẫn cài đặt:
 
 
 Lưu ý: Cài đặt solver trên môi trường linux hoặc wsl2 
+Lưu ý 2:
+     Đã có thêm chức năng đọc file trực tiếp từ TSG.txt. Khi gọi gõ ./main thì truyền 1 số bất kỳ ở đằng sau như ./main 1 để đọc từ TSG.txt
+     TSG.txt cần chỉnh sửa 1 thêm các dòng: 
+     - c, n , đích trong không gian , flow , earliness, tardliness , điểm đích trong đồ thị TSG 
+     - c N  Số đỉnh trong không gian 
+     - alpha 1 // Các hệ số 
+     - beta 1  // Các hệ số 
+     - gamma 1 // Các hệ số
+     Khi chạy trong giả lập cũng cần phải thay đổi code để mỗi khi cập nhật TSG.txt thì nó cũng phải in ra thêm các dòng có định dạng như này 
+     
