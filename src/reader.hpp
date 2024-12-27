@@ -35,6 +35,7 @@ public:
 
     
     Coef set_coef();
+    Coef set_coef_directed();
 };
 
 

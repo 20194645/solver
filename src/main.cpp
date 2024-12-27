@@ -1,11 +1,25 @@
 #include "reader.hpp"
 #include "SCIPsovler.hpp"
 
-int main(){
-    string filepath = "/mnt/d/DATN/solver/prj/data/general.txt";
+int main(int argc, char* argv[]){
+    string filepath;
+    if (argc == 1)
+    {
+        filepath = "/mnt/d/DATN/solver/prj/data/general.txt";
+    }
+    
+    else{
+        filepath = "/mnt/d/DATN/pathPlanningSimulation/TSG.txt";
+        
+    }
     Reader reader(filepath);
-    // Sử dụng hàm set_coef để đọc toàn bộ dữ liệu
-    Coef coef = reader.set_coef();
+    Coef coef;
+    if (argc == 1){
+        coef = reader.set_coef();
+    }
+    else{
+        coef = reader.set_coef_directed();
+    }
     Solver sol(coef);
     // sol.set_end_queue();
     SCIP_CALL(sol.Solve());
